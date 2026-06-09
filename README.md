@@ -1,25 +1,37 @@
-# Reaction Click Game
+# Neon Reflex Rush
 
-Mini game web sederhana menggunakan HTML, CSS, dan JavaScript.
+Mini game arcade berbasis web menggunakan HTML, CSS, dan JavaScript.
 
 ## Fitur
-- Klik target acak
-- Timer 30 detik
-- Skor terbaik tersimpan di browser
-- Tampilan modern
-- Cocok untuk GitHub Pages
 
-## Cara upload ke GitHub
-1. Buat repository baru di GitHub.
-2. Upload file:
-   - `index.html`
-   - `style.css`
-   - `script.js`
-   - `README.md`
-3. Masuk ke **Settings > Pages**.
-4. Pilih **Deploy from a branch**.
-5. Pilih branch `main` dan folder `/(root)`.
-6. Klik **Save**.
+- Desain neon glassmorphism
+- Mode Easy, Normal, dan Hard
+- Sistem skor dan combo
+- Level otomatis semakin sulit
+- Hit dan miss counter
+- Efek animasi target
+- Floating score text
+- Best score tersimpan di browser
+- Bisa dipasang di GitHub Pages
 
-## Cara main
-Klik tombol **Start Game**, lalu klik lingkaran target secepat mungkin.
+## Cara Main
+
+1. Pilih mode permainan.
+2. Klik **Start Game**.
+3. Klik target neon secepat mungkin.
+4. Jangan klik area kosong karena akan dihitung sebagai miss.
+5. Kumpulkan combo untuk mendapat skor lebih tinggi.
+
+## GitHub Pages
+
+Aktifkan melalui:
+
+**Settings > Pages > Deploy from a branch > main > /(root) > Save**
+
+Website biasanya bisa dibuka di:
+
+```text
+https://tipstrikpedia.github.io/eaction-click-game./
+```
+
+Catatan: nama repository saat ini adalah `eaction-click-game.`. Kalau ingin link lebih rapi, sebaiknya rename repository menjadi `reaction-click-game` di GitHub.
