@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reaction Click Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="badge">Mini Game Web</p>
+      <h1>Reaction Click Game</h1>
+      <p class="subtitle">Klik target secepat mungkin sebelum waktu habis. Semakin cepat, skor semakin tinggi.</p>
+
+      <div class="stats">
+        <div>
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span>Time</span>
+          <strong id="time">30</strong>
+        </div>
+        <div>
+          <span>Best</span>
+          <strong id="best">0</strong>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="startBtn">Start Game</button>
+        <button id="resetBtn" class="secondary">Reset Best</button>
+      </div>
+    </section>
+
+    <section class="game-card">
+      <div id="gameArea" class="game-area">
+        <div class="message" id="message">
+          Tekan <b>Start Game</b> lalu klik lingkaran yang muncul.
+        </div>
+        <button id="target" class="target" aria-label="target"></button>
+      </div>
+    </section>
+
+    <section class="tips">
+      <h2>Cara Main</h2>
+      <ol>
+        <li>Klik tombol <b>Start Game</b>.</li>
+        <li>Klik target bulat yang muncul secara acak.</li>
+        <li>Target makin lama makin kecil dan cepat.</li>
+        <li>Skor terbaik akan tersimpan di browser.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
