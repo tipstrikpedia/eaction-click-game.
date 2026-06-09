@@ -3,54 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reaction Click Game</title>
+  <title>Neon Reflex Rush</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+  <div class="bg-grid"></div>
+
   <main class="app">
-    <section class="hero">
-      <p class="badge">Mini Game Web</p>
-      <h1>Reaction Click Game</h1>
-      <p class="subtitle">Klik target secepat mungkin sebelum waktu habis. Semakin cepat, skor semakin tinggi.</p>
-
-      <div class="stats">
-        <div>
-          <span>Score</span>
-          <strong id="score">0</strong>
-        </div>
-        <div>
-          <span>Time</span>
-          <strong id="time">30</strong>
-        </div>
-        <div>
-          <span>Best</span>
-          <strong id="best">0</strong>
-        </div>
+    <section class="hero glass">
+      <div class="hero-text">
+        <p class="badge">Arcade Mini Game</p>
+        <h1>Neon Reflex Rush</h1>
+        <p class="subtitle">
+          Uji kecepatan tanganmu. Klik target neon, kumpulkan combo, hindari miss,
+          dan pecahkan rekor terbaikmu.
+        </p>
       </div>
 
-      <div class="controls">
-        <button id="startBtn">Start Game</button>
-        <button id="resetBtn" class="secondary">Reset Best</button>
+      <div class="hero-panel">
+        <div class="level-pill">
+          <span>Mode</span>
+          <select id="modeSelect" aria-label="Pilih mode game">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <button id="startBtn" class="primary">Start Game</button>
+        <button id="resetBtn" class="ghost">Reset Best</button>
       </div>
     </section>
 
-    <section class="game-card">
+    <section class="dashboard">
+      <article class="stat glass">
+        <span>Score</span>
+        <strong id="score">0</strong>
+      </article>
+      <article class="stat glass">
+        <span>Time</span>
+        <strong><span id="time">40</span>s</strong>
+      </article>
+      <article class="stat glass">
+        <span>Combo</span>
+        <strong>x<span id="combo">0</span></strong>
+      </article>
+      <article class="stat glass">
+        <span>Best</span>
+        <strong id="best">0</strong>
+      </article>
+    </section>
+
+    <section class="game-shell glass">
+      <div class="game-topbar">
+        <div>
+          <span class="small-label">Level</span>
+          <strong id="level">1</strong>
+        </div>
+        <div>
+          <span class="small-label">Hits</span>
+          <strong id="hits">0</strong>
+        </div>
+        <div>
+          <span class="small-label">Miss</span>
+          <strong id="misses">0</strong>
+        </div>
+      </div>
+
       <div id="gameArea" class="game-area">
-        <div class="message" id="message">
-          Tekan <b>Start Game</b> lalu klik lingkaran yang muncul.
+        <div class="center-message" id="message">
+          <div class="pulse-icon">⚡</div>
+          <h2>Siap main?</h2>
+          <p>Tekan <b>Start Game</b>, lalu klik target neon secepat mungkin.</p>
         </div>
-        <button id="target" class="target" aria-label="target"></button>
+        <button id="target" class="target" aria-label="target game">
+          <span></span>
+        </button>
+        <div id="floatingText" class="floating-text"></div>
       </div>
     </section>
 
-    <section class="tips">
+    <section class="rules glass">
       <h2>Cara Main</h2>
-      <ol>
-        <li>Klik tombol <b>Start Game</b>.</li>
-        <li>Klik target bulat yang muncul secara acak.</li>
-        <li>Target makin lama makin kecil dan cepat.</li>
-        <li>Skor terbaik akan tersimpan di browser.</li>
-      </ol>
+      <div class="rule-grid">
+        <div>
+          <b>1. Klik target</b>
+          <p>Setiap klik benar menambah skor dan combo.</p>
+        </div>
+        <div>
+          <b>2. Jangan klik kosong</b>
+          <p>Miss akan mengurangi combo dan skor.</p>
+        </div>
+        <div>
+          <b>3. Naik level</b>
+          <p>Target makin kecil saat skor semakin tinggi.</p>
+        </div>
+        <div>
+          <b>4. Pecahkan rekor</b>
+          <p>Best score tersimpan otomatis di browser.</p>
+        </div>
+      </div>
     </section>
   </main>
 
